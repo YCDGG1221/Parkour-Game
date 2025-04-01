@@ -1,0 +1,27 @@
+# ========== Unity 專案忽略清單 ==========
+
+# 避免上傳大型不必要的編譯檔案
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+
+# 版本控制以外的設定檔
+MemoryCaptures/
+Packages/
+ProjectSettings/EditorBuildSettings.asset
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
