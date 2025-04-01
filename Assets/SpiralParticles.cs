@@ -23,8 +23,7 @@ public class SpiralParticles : MonoBehaviour
 
         for (int i = 0; i < particleCount; i++)
         {
-            // 交替讓粒子起始相位不同，形成雙螺旋
-            float phaseOffset = (i % 2 == 0) ? 0 : Mathf.PI; // 0 或 π 使它們相差半圈
+            float phaseOffset = (i % 2 == 0) ? 0 : Mathf.PI;
             float angle = Time.time * spiralSpeed + i * 0.2f + phaseOffset;
 
             particles[i].position = new Vector3(
