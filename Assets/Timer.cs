@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // 要加這個才能切換場景
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float remainingTime;
-    [SerializeField] GameObject gameOverPanel; // 拖曳 GameOverPanel 進來
+    [SerializeField] GameObject gameOverPanel;
 
     void Update()
     {
@@ -28,14 +28,14 @@ public class Timer : MonoBehaviour
 
     void GameOver()
     {
-        gameOverPanel.SetActive(true); // 顯示 Game Over 畫面
-        StartCoroutine(ReturnToMainMenu()); // 延遲幾秒後回到主選單
+        gameOverPanel.SetActive(true);
+        StartCoroutine(ReturnToMainMenu());
     }
 
     IEnumerator ReturnToMainMenu()
     {
-        yield return new WaitForSeconds(3); // 等 3 秒
-        SceneManager.LoadScene("MainMenu"); // 換成你的主選單場景名稱
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
